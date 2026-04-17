@@ -1,111 +1,51 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Builder</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+<title>Website Builder</title>
+
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ===================== -->
-<!-- 1. Landing Page -->
-<!-- ===================== -->
-<section id="landing">
-    <div class="container">
-        <h1>ابني تصور موقعك خلال دقائق</h1>
-        <p>أداة تفاعلية تساعدك على تصميم شكل موقعك قبل تنفيذه</p>
+<section class="hero">
 
-        <button id="startBtn">ابدأ الآن</button>
-    </div>
-</section>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">YOUR LOGO</div>
 
+        <div class="lang">
+            <button>English</button>
+            <button class="active">العربية</button>
+        </div>
+    </nav>
 
-<!-- ===================== -->
-<!-- 2. Wizard -->
-<!-- ===================== -->
-<section id="wizard" class="hidden">
+    <!-- Content -->
+    <div class="hero-content">
 
-    <!-- Step 1 -->
-    <div class="step active" data-step="1">
-        <h2>نوع الموقع</h2>
-        <select id="siteType">
-            <option value="store">متجر</option>
-            <option value="services">خدمات</option>
-            <option value="company">شركة</option>
-            <option value="blog">مدونة</option>
-        </select>
+        <div class="text">
+            <h1>Visualize your website concept in minutes</h1>
+            <p>Answer a few questions and preview your website before building it</p>
 
-        <button class="next">التالي</button>
-    </div>
+            <button id="startNow">Start Now</button>
 
-    <!-- Step 2 -->
-    <div class="step" data-step="2">
-        <h2>الأقسام المطلوبة</h2>
+            <div class="features">
+                <span>✔ No sign-up needed</span>
+                <span>⏱ Ready in under 2 minutes</span>
+                <span>💼 Built for businesses</span>
+            </div>
+        </div>
 
-        <label><input type="checkbox" value="about"> من نحن</label>
-        <label><input type="checkbox" value="services"> خدمات</label>
-        <label><input type="checkbox" value="contact"> تواصل</label>
-        <label><input type="checkbox" value="products"> منتجات</label>
+        <div class="image">
+            <img src="https://cdn.dribbble.com/users/1787323/screenshots/11114135/media/6b2c4f7f6d6e6f73f7c9f1d4b8b8b8b8.png" alt="">
+        </div>
 
-        <button class="next">التالي</button>
-    </div>
-
-    <!-- Step 3 -->
-    <div class="step" data-step="3">
-        <h2>أسلوب التصميم</h2>
-
-        <select id="style">
-            <option value="modern">عصري</option>
-            <option value="classic">رسمي</option>
-            <option value="minimal">بسيط</option>
-            <option value="luxury">فاخر</option>
-        </select>
-
-        <button class="next">التالي</button>
-    </div>
-
-    <!-- Step 4 -->
-    <div class="step" data-step="4">
-        <h2>الألوان</h2>
-
-        <select id="theme">
-            <option value="light">فاتح</option>
-            <option value="dark">غامق</option>
-            <option value="blue">أزرق</option>
-            <option value="auto">حسب النظام</option>
-        </select>
-
-        <button id="finish">عرض النتيجة</button>
     </div>
 
 </section>
 
-
-<!-- ===================== -->
-<!-- 3. Preview -->
-<!-- ===================== -->
-<section id="preview" class="hidden">
-    <h2>معاينة الموقع</h2>
-
-    <div id="previewContainer">
-        <!-- سيتم توليد المحتوى هنا -->
-    </div>
-
-    <button id="restart">إعادة</button>
-</section>
-
-
-<!-- ===================== -->
-<!-- Language Toggle -->
-<!-- ===================== -->
-<button id="langToggle">EN</button>
-
-
-<!-- JS -->
 <script src="script.js"></script>
-
 </body>
 </html>
