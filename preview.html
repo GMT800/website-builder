@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preview</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+/* تصميم الموقع التجريبي */
+.preview-site {
+    font-family: sans-serif;
+}
+
+.navbar-preview {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: var(--primary);
+    color: white;
+}
+
+.hero-preview {
+    padding: 60px;
+    text-align: center;
+    background: var(--secondary);
+    color: white;
+}
+
+.section {
+    padding: 40px;
+    text-align: center;
+}
+
+.footer {
+    background: #111;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+</style>
+
+</head>
+<body>
+
+<div id="sitePreview" class="preview-site"></div>
+
+<script>
+
+// تحميل البيانات
+const data = JSON.parse(localStorage.getItem("userData"));
+
+// ألوان
+function applyTheme(theme) {
+    const root = document.documentElement;
+
+    if (theme === "dark") {
+        root.style.setProperty('--primary', '#111');
+        root.style.setProperty('--secondary', '#333');
+    }
+
+    if (theme === "light") {
+        root.style.setProperty('--primary', '#007bff');
+        root.style.setProperty('--secondary', '#00c6ff');
+    }
+
+    if (theme === "blue") {
+        root.style.setProperty('--primary', '#1e3a8a');
+        root.style.setProperty('--secondary', '#2563eb');
+    }
+}
+
+// Templates
+function buildTemplate(data) {
+
+    let html = "";
+
+    // Navbar
+    html += `
+    <div class="navbar-preview">
+        <h2>Logo</h2>
+        <div>الرئيسية | خدمات | تواصل</div>
+    </div>
+    `;
+
+    // Hero
+    html += `
+    <div class="hero-preview">
+        <h1>مرحباً بك في موقع ${data.siteType}</h1>
+        <p>هذا نموذج تجريبي لموقعك</p>
+    </div>
+    `;
+
+    // Sections
+    if (data.sections.includes("about")) {
+        html += `<div class="section"><h2>من نحن</h2></div>`;
+    }
+
+    if (data.sections.includes("services")) {
+        html += `<div class="section"><h2>خدماتنا</h2></div>`;
+    }
+
+    if (data.sections.includes("products")) {
+        html += `<div class="section"><h2>منتجاتنا</h2></div>`;
+    }
+
+    if (data.sections.includes("contact")) {
+        html += `<div class="section"><h2>تواصل معنا</h2></div>`;
+    }
+
+    // Footer
+    html += `
+    <div class="footer">
+        © 2026 جميع الحقوق محفوظة
+    </div>
+    `;
+
+    return html;
+}
+
+// تشغيل
+applyTheme(data.theme);
+document.getElementById("sitePreview").innerHTML = buildTemplate(data);
+
+</script>
+
+</body>
+</html>
