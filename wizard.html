@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wizard</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wizard-container">
+
+    <!-- Progress -->
+    <div class="progress">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Step 1 -->
+    <div class="step active">
+        <h2>نوع الموقع</h2>
+
+        <div class="options">
+            <button class="option" data-value="store">متجر</button>
+            <button class="option" data-value="services">خدمات</button>
+            <button class="option" data-value="company">شركة</button>
+        </div>
+
+        <button class="next">التالي</button>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="step">
+        <h2>الأقسام</h2>
+
+        <div class="options multi">
+            <button class="option" data-value="about">من نحن</button>
+            <button class="option" data-value="services">خدمات</button>
+            <button class="option" data-value="products">منتجات</button>
+            <button class="option" data-value="contact">تواصل</button>
+        </div>
+
+        <button class="next">التالي</button>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="step">
+        <h2>التصميم</h2>
+
+        <div class="options">
+            <button class="option" data-value="modern">عصري</button>
+            <button class="option" data-value="classic">رسمي</button>
+            <button class="option" data-value="minimal">بسيط</button>
+        </div>
+
+        <button class="next">التالي</button>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="step">
+        <h2>الألوان</h2>
+
+        <div class="options">
+            <button class="option" data-value="dark">غامق</button>
+            <button class="option" data-value="light">فاتح</button>
+            <button class="option" data-value="blue">أزرق</button>
+        </div>
+
+        <button id="finish">عرض النتيجة</button>
+    </div>
+
+</div>
+
+<script src="wizard.js"></script>
+</body>
+</html>
