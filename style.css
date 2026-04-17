@@ -1,138 +1,86 @@
-/* Reset بسيط */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* الخط العام */
 body {
-    font-family: 'Cairo', sans-serif;
-    background: #f5f7fa;
-    color: #333;
+    margin: 0;
+    font-family: sans-serif;
+    background: linear-gradient(135deg, #2b6cb0, #1e3a8a);
+    color: white;
 }
 
-/* حاوية عامة */
-.container {
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
-    padding: 40px 20px;
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
 }
 
-/* إخفاء العناصر */
-.hidden {
-    display: none;
+.logo {
+    font-weight: bold;
 }
 
-/* ===================== */
-/* Landing */
-/* ===================== */
-#landing {
-    height: 100vh;
+.lang button {
+    margin-left: 10px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.lang .active {
+    background: white;
+    color: black;
+}
+
+/* Hero */
+.hero-content {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 50px;
 }
 
-#landing h1 {
-    font-size: 32px;
-    margin-bottom: 15px;
+.text {
+    max-width: 500px;
 }
 
-#landing p {
-    margin-bottom: 25px;
-    color: #666;
+.text h1 {
+    font-size: 40px;
+}
+
+.text p {
+    margin: 20px 0;
+    color: #ddd;
 }
 
 /* زر */
-button {
-    padding: 12px 25px;
+#startNow {
+    background: linear-gradient(45deg, #00ffae, #00c6ff);
     border: none;
-    border-radius: 10px;
-    background: #007bff;
-    color: white;
-    font-size: 16px;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 18px;
     cursor: pointer;
-    transition: 0.3s;
 }
 
-button:hover {
-    background: #0056b3;
+/* Features */
+.features {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-/* ===================== */
-/* Wizard */
-/* ===================== */
-#wizard {
-    max-width: 600px;
-    margin: auto;
-    padding: 40px 20px;
+/* صورة */
+.image img {
+    width: 500px;
 }
 
-.step {
-    display: none;
-}
-
-.step.active {
-    display: block;
-}
-
-.step h2 {
-    margin-bottom: 20px;
-}
-
-/* Inputs */
-select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-}
-
-/* Checkbox */
-label {
-    display: block;
-    margin-bottom: 10px;
-    text-align: right;
-}
-
-/* ===================== */
-/* Preview */
-/* ===================== */
-#preview {
-    padding: 40px;
-    text-align: center;
-}
-
-#previewContainer {
-    margin-top: 30px;
-    padding: 20px;
-    border-radius: 15px;
-    background: white;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-}
-
-/* ===================== */
-/* Language Button */
-/* ===================== */
-#langToggle {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    background: #222;
-}
-
-/* ===================== */
 /* Responsive */
-/* ===================== */
-@media (max-width: 600px) {
-    #landing h1 {
-        font-size: 24px;
+@media (max-width: 900px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
     }
 
-    button {
-        width: 100%;
+    .image img {
+        width: 300px;
     }
 }
