@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Builder</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== -->
+<!-- 1. Landing Page -->
+<!-- ===================== -->
+<section id="landing">
+    <div class="container">
+        <h1>ابني تصور موقعك خلال دقائق</h1>
+        <p>أداة تفاعلية تساعدك على تصميم شكل موقعك قبل تنفيذه</p>
+
+        <button id="startBtn">ابدأ الآن</button>
+    </div>
+</section>
+
+
+<!-- ===================== -->
+<!-- 2. Wizard -->
+<!-- ===================== -->
+<section id="wizard" class="hidden">
+
+    <!-- Step 1 -->
+    <div class="step active" data-step="1">
+        <h2>نوع الموقع</h2>
+        <select id="siteType">
+            <option value="store">متجر</option>
+            <option value="services">خدمات</option>
+            <option value="company">شركة</option>
+            <option value="blog">مدونة</option>
+        </select>
+
+        <button class="next">التالي</button>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="step" data-step="2">
+        <h2>الأقسام المطلوبة</h2>
+
+        <label><input type="checkbox" value="about"> من نحن</label>
+        <label><input type="checkbox" value="services"> خدمات</label>
+        <label><input type="checkbox" value="contact"> تواصل</label>
+        <label><input type="checkbox" value="products"> منتجات</label>
+
+        <button class="next">التالي</button>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="step" data-step="3">
+        <h2>أسلوب التصميم</h2>
+
+        <select id="style">
+            <option value="modern">عصري</option>
+            <option value="classic">رسمي</option>
+            <option value="minimal">بسيط</option>
+            <option value="luxury">فاخر</option>
+        </select>
+
+        <button class="next">التالي</button>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="step" data-step="4">
+        <h2>الألوان</h2>
+
+        <select id="theme">
+            <option value="light">فاتح</option>
+            <option value="dark">غامق</option>
+            <option value="blue">أزرق</option>
+            <option value="auto">حسب النظام</option>
+        </select>
+
+        <button id="finish">عرض النتيجة</button>
+    </div>
+
+</section>
+
+
+<!-- ===================== -->
+<!-- 3. Preview -->
+<!-- ===================== -->
+<section id="preview" class="hidden">
+    <h2>معاينة الموقع</h2>
+
+    <div id="previewContainer">
+        <!-- سيتم توليد المحتوى هنا -->
+    </div>
+
+    <button id="restart">إعادة</button>
+</section>
+
+
+<!-- ===================== -->
+<!-- Language Toggle -->
+<!-- ===================== -->
+<button id="langToggle">EN</button>
+
+
+<!-- JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
