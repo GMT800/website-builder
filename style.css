@@ -84,3 +84,70 @@ body {
         width: 300px;
     }
 }
+/* ===================== */
+/* Wizard */
+/* ===================== */
+.wizard-container {
+    max-width: 600px;
+    margin: 80px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    color: #333;
+}
+
+/* Progress */
+.progress {
+    height: 8px;
+    background: #eee;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 25%;
+    background: #007bff;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* Steps */
+.step {
+    display: none;
+}
+
+.step.active {
+    display: block;
+}
+
+.step h2 {
+    margin-bottom: 20px;
+}
+
+/* Options */
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.option {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    background: white;
+}
+
+.option.active {
+    border-color: #007bff;
+    background: #e7f0ff;
+}
+
+/* زر */
+.next, #finish {
+    margin-top: 20px;
+    width: 100%;
+}
